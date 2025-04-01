@@ -1,0 +1,53 @@
+{
+    "name": "Albec ACS Demos",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "VARIANT": "jammy",
+            "VERSION": "8.0"
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/azure-cli:1": {
+            "version": "2.48.1"
+        },
+        "ghcr.io/devcontainers/features/docker-from-docker:1": {
+            "version": "20.10"
+        },
+        "ghcr.io/devcontainers/features/github-cli:1": {
+            "version": "2"
+        },
+        "ghcr.io/stuartleeks/dev-container-features/dev-tunnels:0": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.azure-dev",
+                "ms-azuretools.vscode-bicep",
+                "ms-azuretools.vscode-docker",
+                "ms-vscode.vscode-node-azure-pack",
+                "ms-vscode.js-debug",
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint",
+                "github.vscode-github-actions",
+                "ms-python.black-formatter",
+                "ms-dotnettools.csdevkit"
+            ]
+        }
+    },
+    "forwardPorts": [
+        49412
+    ],
+    "postAttachCommand": "",
+    "postCreateCommand": "",
+    "remoteUser": "vscode",
+    "hostRequirements": {
+        "memory": "8gb",
+        "cpus": 4
+    },
+    "portsAttributes": {
+        "49412": {
+            "label": "Call API Endpoint"
+        }
+    }
+}
